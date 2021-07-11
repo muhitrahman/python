@@ -1,0 +1,128 @@
+class Professional:
+    # main class begin
+    def __init__(self, name, phone_number, designation):
+        # create init function to assign values for name, phone, designation of the professionals
+        self.name = name
+        # taking professional name and assign it to name object
+        self.phone_number = phone_number
+        # taking professional phone_number and assign it to phone_number object
+        self.designation = designation
+        # taking professional designation and assign it to designation object
+
+    def print(self):
+        # print function for all output
+        print('\nCyber Professional Information Entered: ')
+        print('Name:', self.name)
+        print('Phone Number:', self.phone_number)
+        print('Designation:', self.designation)
+
+
+def CyberProfessional():
+    # function for professionals
+    print('Enter the person information')
+    name = input('Enter name: ')
+    phone_number = input('Enter phone number: ')
+    designation = input('Enter the designation: ')
+    obj = Professional(name, phone_number, designation)
+    # create an instance variable for main class and assign the arguments
+    professional_list.append(obj)
+    # create and append the list
+    obj.print()
+    # print the instance variable
+
+
+inventory = {'Router': 3, 'Switch': 2, 'Laptop': 16, 'Mainframe': 1}
+# python set to store inventory items in single variable
+professional_list = []
+
+
+# empty list literal
+
+
+def GadgetInventory():
+    # gadget list function
+    print('Inventory: ')
+    for key, value in inventory.items():
+        print(key, ':', value)
+    #     create a for loop for gadget list
+    element_to_add = input(
+        '\nWhat do you want to add? Press R for router, S for switch, L for Laptop, M for Mainframe: ')
+    element_to_add = element_to_add.upper()
+    # checking the input values
+    try:
+        # checking the input values
+        if element_to_add == "R":
+            qunatity = int(input('How many routers do you want to add?: '))
+            inventory['Router'] += qunatity
+        elif element_to_add == "S":
+            qunatity = int(input('How many switch do you want to add?: '))
+            inventory['Switch'] += qunatity
+        elif element_to_add == "L":
+            qunatity = int(input('How many laptop do you want to add?: '))
+            inventory['Laptop'] += qunatity
+        elif element_to_add == "M":
+            qunatity = int(input('How many mainframe do you want to add?: '))
+            inventory['Mainframe'] += qunatity
+        else:
+            print('Invalid option for gadget')
+        print('Gadget Inventory Updated Inventory: ')
+        for key, value in inventory.items():
+            print(key, ':', value)
+
+    except:
+        print('Invalid value entered try again')
+    #     print error
+
+
+def SalaryCalculator():
+    # salary function
+    try:
+        # user input
+        wages = float(input('Enter the hourly wage: '))
+        hours_worked = float(input('Enter total hours worked: '))
+        salary = wages * hours_worked
+        # calculating the wages and hours
+        print('Total Salary of month: $', salary)
+    #     print result
+    except:
+        print('Invalid values entered try again')
+
+
+def GadgetsCostCalculator():
+    # gadget price function
+    try:
+        name_of_item = input('Enter the name of the item:  ', )
+        price = float(input('Enter the price of the item: '))
+        number_of_item = int(input('Enter the number of the items needed: '))
+        total_cost = price * number_of_item
+        print('Total cost of gadget of', name_of_item, 'is $', total_cost)
+    except:
+        print('Invalid values entered try again')
+
+
+# option = 0
+while True:
+    # printing results with conditions
+    try:
+        print('Select from below options')
+        print('1. Enter personal data')
+        print('2. Salary Calculator')
+        print('3. Gadget Inventory')
+        print('4. Gadget Cost Caculator')
+        print('5. Exit')
+        option = int(input('Your choice: '))
+        if option == 1:
+            CyberProfessional()
+        elif option == 2:
+            SalaryCalculator()
+        elif option == 3:
+            GadgetInventory()
+        elif option == 4:
+            GadgetsCostCalculator()
+        elif option == 5:
+            print('Extitng the program')
+            break
+        else:
+            print('Enter a valid option')
+    except:
+        print('Enter only integer values')
