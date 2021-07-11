@@ -1,0 +1,19 @@
+# enter user input
+num = int(input("Enter a number: "))
+
+
+# This function computes the find factor of the entered number...
+# ...and takes one integer value as a parameter
+def display_factors(num):
+    # using for loop to iterate numbers from 1 num(entered value)
+    for i in range(1, num + 1):
+        # check all numbers in the loop if it is a divisor or not
+        if num % i == 0:
+            # then print the numbers
+            print(i)
+
+
+# print text
+print("The factors numbers for {} are : ".format(num))
+# print the numbers with display_factors function
+display_factors(num)
