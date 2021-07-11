@@ -1,0 +1,32 @@
+# Author : Syed Muhitur Rahman
+# Date : 11/03/2021
+# Version : 1.0
+# Comments:
+# Guess the random number game
+# One player vs. the computer
+
+import random
+minGuess = 1
+maxGuess = 6
+
+# Ask the user for their name and their guess
+name = input("What is your name? : ")
+print("Hi " + name)
+print("Enter a number between: ", minGuess, "and", maxGuess)
+guess = int(input("What is your guess? : "))
+
+# Generate a random number and tell the user if they won or lost
+secretNumber = random.randint(minGuess, maxGuess)
+if guess == secretNumber:
+    print("Congratulation, you got it right!")
+else:
+    print("You lose - the number was ", secretNumber)
+
+    print("Thank you for playing Guess the Number")
+
+    # Line 14- Here add the variable "name" with other text "Hi" to print
+    # Line 15 - removed "+" sign and add "," to concatenate str to str.
+    # line 20 - removed redundant parenthesis,
+    # line 20 - replace equal sign "==" to not-equal sign "!=" to assign the value
+    # Line 20 - add colon sign ":" after if statements block
+    # Line 23 - add the variable "guess" to print the random number entered.
