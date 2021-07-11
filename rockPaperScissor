@@ -1,0 +1,41 @@
+# Author: Syed Muhitur Rahman
+# Date: 12/03/2021
+# Version: 1.0
+#
+# Rock Paper Scissors Game
+# Two players
+
+print("Welcome to Rock, Paper, Scissors!")  # print function
+print("Let's Begin ...")  # print function
+name1 = input("Player 1: What' your name?")  # asking for input
+name2 = input("Player 2: What's your name?\n")  # asking for input
+
+print("Hello " + name1 + " and " + name2)  # print function
+print(name2 + ": Close your eyes!")  # print function
+
+# asking for input
+choice1 = input(name1 + ": enter 'r' for rock, 'p' for paper, and 's' for scissor: ")
+print("Great choice! Now - cover your answer and ask " + name2 + " to choose. \n\n")
+choice2 = input(name2 + ": enter 'r' for rock, 'p' for paper, and 's' for scissor: ")
+
+# if block with condition checking
+if choice1 == choice2:
+    print(name1 + " and " + name2 + "," + " It is a tie")
+
+if choice1 == "p" and choice2 == "r":
+    print(name1 + " lose")
+if choice1 == "p" and choice2 == "s":
+    print(name1 + " lose")
+
+if choice1 == "r" and choice2 == "p":
+    print(name1 + " win")
+if choice1 == "r" and choice2 == "s":
+    print(name1 + " lose")
+
+if choice1 == "s" and choice2 == "p":
+    print(name1 + " win")
+if choice1 == "s" and choice2 == "r":
+    print(name1 + " win")
+
+# print function
+print("Thanks for playing Rock, Paper, Scissor")
