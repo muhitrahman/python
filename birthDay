@@ -1,0 +1,42 @@
+# Author: Syed Muhitur Rahman
+# Date: 13/03/2021
+# Version: 1.0
+#
+# Rock Paper Scissors Game
+# Two players
+
+# datetime function import
+import datetime
+
+# assign and initialize variables and with user input
+birth_year = int(input("Enter your birth year: "))
+current_year = datetime.datetime.now().year
+
+# Initializing variables with user input
+birthday_gone = input("have you already had your birthday?: y/n ")
+
+
+# If statement with condition checking
+if birthday_gone == "y":
+    print("I am sure that was a good day")
+
+if birthday_gone == "n":
+    print("I hope you will have a good one")
+
+# print current age
+print("your age is: ", (current_year - birth_year))
+
+"""
+print(input("enter year you born"))
+userInput = "y"
+
+x = 0
+
+while userInput == "y":
+    number = int(input("Enter a number"))
+    x = x + number
+    userInput = input("Would you like to add another number?")
+
+print("the sum of this number is : " + str(x))
+"""
+
