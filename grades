@@ -1,0 +1,79 @@
+def average(numbers):
+    sum = 0
+    # initialize sum variables to 0
+    for number in numbers:
+        # use for loop to loop through each elements and add into sum
+        sum += float(number)
+    #     converting sum into float number
+    return sum / len(numbers)
+    #     the return calculated by using len built in function
+
+
+def get_average(student):
+    # function for student dictionaries
+    assignments = average(student['assignments'])
+    # define the function with argument
+    presentations = average(student['presentations'])
+    lab_tasks = average(student['lab tasks'])
+    return (assignments * 0.6 + presentations * 0.1 + lab_tasks * 0.3)
+
+
+# return the multiplication results of three variable
+
+def letter_grade(score):
+    # checking the statements with if else
+    if score >= 90:
+        return 'HD'
+    elif score >= 80:
+        return 'D'
+    elif score >= 70:
+        return 'CR'
+    elif score >= 60:
+        return 'P'
+    else:
+        return 'F'
+
+
+def class_average(students):
+    results = []
+    # crete an empty list
+    for student in students:
+        result = get_average(student)
+        results.append(result)
+    #     we go through the student list and calculate an average for student using....
+    # get_average student function previously declared and append this average to the...
+    # result list
+    return average(results)
+
+
+Bob = {
+    # creating dictionary and iterating with each key value pair
+    'name': 'bob',
+    'assignments': [50, 60, 80, 90],
+    'presentations': [40, 68, 67, 89],
+    'lab tasks': [44, 55, 77.78]
+}
+
+Brat = {
+    'name': 'brat',
+    'assignments': [60, 30, 90, 70],
+    'presentations': [49, 78, 67, 69],
+    'lab tasks': [42, 57, 97.78]
+}
+
+students = [Bob, Brat]
+# creating students list with two students
+
+print('Name\t\tAssignments\t\tPresentations\t\tLab Tasks')
+print('---------------------------------------------------------------------------')
+
+for student in students:
+    # looping through students list
+    print(student['name'], ' ',
+          student['assignments'],
+          student['presentations'],
+          student['lab tasks'], sep='\t\t')
+    # printing the results
+
+print('Class Average: ', class_average(students))
+# print student class_average
