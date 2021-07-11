@@ -1,0 +1,19 @@
+def convert_temp(temp_scale=None, source_temp=None):
+    # add formula to convert celsius to fahrenheit
+    if temp_scale in "Cc":
+        return 'Fahrenheit', (source_temp * (9 / 5)) + 32
+    elif temp_scale in "Ff":
+        # add formula to convert fahrenheit to celsius
+        return 'Celsius', (source_temp - 32) * (5 / 9)
+    else:
+        return repr(temp_scale)
+
+
+# user input
+temp_scale = input("Enter C/c or F/f for celsius and fahrenheit:  ")
+# user input and check input type in integer
+source_temp = int(input("What is the temperature: "))
+# assiging local variables
+s, t = convert_temp(temp_scale, source_temp)
+# print results
+print("Today's temperature is ", source_temp, "degrees", temp_scale, "and", t, "degrees", s)
