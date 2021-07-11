@@ -1,0 +1,17 @@
+
+
+#Take integer value from user
+total_blocks = int(input("Enter the number of blocks: "))
+
+current_blocks = 0
+height = 0
+
+while current_blocks in range(total_blocks):
+    # increment height
+    height += 1
+    # increase the block count by 1current_block+=1
+    current_blocks += 1
+    # get the blocks amount
+    total_blocks -= current_blocks
+
+print("The height of the pyramid: ", height)
