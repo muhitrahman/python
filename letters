@@ -1,0 +1,9 @@
+import re
+# import re module
+txt = input('Enter text to check starts and ends with vowel or not: ')
+isValid = re.search('^[aeiou].*[aeiou]$', txt.lower())
+# regex queries for word that begin and end with vowels
+if isValid:
+    print(txt,  ' -> is valid with vowels condition')
+else:
+    print(txt, ' -> is invalid with vowels condition')
