@@ -1,0 +1,14 @@
+import re
+
+txt = input("Enter an email: ")
+isValid = re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", txt.lower())
+# Match the start of a string
+# Match a sequence of one or more letters
+# Match any character except newline
+# Match 1 or more repetitions
+# Match the end of a string
+
+if isValid:
+    print(txt, " -> is a valid email address")
+else:
+    print(txt, " -> is an invalid email address")
