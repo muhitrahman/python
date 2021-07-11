@@ -1,0 +1,17 @@
+salary = list()
+# salary values
+salary = [3000, 8000, 8500, 7500, 3000, 9000]
+# sort salary
+salary.sort()
+print("Ascending ordered salary: ", salary)
+# add salary
+salary.insert(0, 7800)
+print("Insert value 7800 in start of the list: ", salary)
+# remove salary
+salary.remove(8500)
+print("After removing 8500 from the list: ", salary)
+# sort salary
+salary.sort(reverse=True)
+print("Descending sorted salary: ", salary)
+
+
